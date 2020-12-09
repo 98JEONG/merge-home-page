@@ -1,0 +1,315 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+body,html {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    font-family: "Roboto";
+    font-size: 14px;
+    padding-bottom: 30px;
+}
+a {
+    text-decoration: none;
+    color: #444;
+}
+.gnb-header {
+    width: 94%;
+    display: flex;
+    justify-content: flex-end;
+    position: fixed;
+    top: 0;
+    left: 0;
+    padding: 0 3%;
+    z-index: 10;
+    height: 50px;
+}
+.gnb-header ul {
+    display: flex;
+    list-style: none;
+    flex-direction: row;
+}
+.gnb-header.todo ul li a,
+.gnb-header ul li a.black {
+    color: #444;
+}
+.gnb-header ul li a{
+    margin-left: 50px;
+    font-size: 1.286em;
+    font-weight: normal;
+    cursor: pointer;
+    color: #fff;
+    position: relative;
+}
+.gnb-header ul li.active a,
+.gnb-header ul li a:hover {
+    color: #E54D36;
+    font-weight: bold;
+}
+.gnb-header ul li.active a::before,
+.gnb-header ul li a:hover::before {
+    content: "";
+    position: absolute;
+    top: 24px;
+    left: 0;
+    width: 100%;
+    height: 3px;
+    background-color: #E54D36;
+}
+.clock-banner {
+    width: 100%;
+    height: 500px;
+    position: relative;
+    background-color: #000000;
+    background-image: url('/images/banner.jpg');
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-position: center center;
+    opacity: 0.7;
+}
+.clock-banner img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0.7;
+}
+.clock-banner .clock {
+    position: absolute;
+    opacity: 0;
+    top: 500px;
+    right: 0px;
+    padding-right: 3%;
+    font-weight: bold;
+}
+.clock-banner .clock p {
+    font-size: 3.571em;
+    color: #ffffff;
+    letter-spacing: 10px;
+    display: flex;
+    justify-content: flex-end;
+    margin: 0;
+}
+.clock-banner .clock p.date {
+    font-family: "Noto Sans KR";
+    font-size: 1.786em;
+}
+.container {
+    max-width: 1500px;
+    width: 100%;
+    margin: 0 auto;
+}
+.container p.intro {
+    font-family: "Noto Sans KR";
+    display: flex;
+    justify-content: center;
+    font-size: 1.786em;
+    margin-top: 18px;
+}
+.container p.intro-contents {
+    display: flex;
+    justify-content: center;
+    font-size: 1.143em;
+    color: #444444;
+}
+.container p.intro-contents span {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+}
+.container .dev-skill-group {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    margin-top: 30px;
+    flex-wrap: wrap;
+}
+.container .dev-skill-group .dev-skill-item {
+    width: 19%;
+    margin-right: 1%;
+    height: 370px;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    border-radius: 5px;
+    border: solid 1px #e1e1e1;
+    margin-top: 18px;
+    box-shadow: 5px 5px 5px #e1e1e1;
+}
+.container .dev-skill-group .dev-skill-item:nth-child(5n) {
+    margin-right: 0;
+}
+.container .dev-skill-group .dev-skill-item div {
+    padding: 10px;
+    font-family: "Noto Sans KR";
+}
+.container .dev-skill-group .dev-skill-item .title {
+    font-size: 1.214em;
+    color: #444444;
+    font-weight: bold;
+}
+.container .dev-skill-group .dev-skill-item .description {
+    font-size: 1.071em;
+    color: #222222;
+}
+.container .dev-skill-group .dev-skill-item img {
+    width: 100%;
+    height: 50%;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+}
+.container .project-group {
+    margin-top: 30px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+.container .project-group .project-item {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    height: 500px;
+    font-family: "Noto Sans KR";
+    padding: 30px;
+    justify-content: center;
+    margin-bottom: 15px;
+    position: relative;
+}
+.container .project-group .project-item.project-book {
+    align-items: flex-end;
+}
+.container .project-group .project-item.project-book::after,
+.container .project-group .project-item.project-dont_sick::after,
+.container .project-group .project-item.project-lemon_game::after {
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+    background-color: #000;
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0.5;
+    z-index: -1;
+}
+.container .project-group .project-item.project-lemon_game::after {
+    background-image: url('/images/lemon_game.jpg');
+}
+.container .project-group .project-item.project-dont_sick::after {
+    background-image: url('/images/sick.jpg');
+}
+.container .project-group .project-item.project-book::after {
+    background-image: url('/images/book.jpg');
+    color: #fff;
+
+}
+.container .project-group .project-item .name {
+    font-size: 1.857em;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+.container .project-group .project-item .about {
+    font-size: 1.143em;
+}
+.container .project-group .project-item .description {
+    font-size: 1em;
+    white-space: pre-line;
+}
+.container .project-group .project-item span {
+    font-size: 0.929em;
+    color: #fff;
+    font-weight: bold;
+}
+.todo.container {
+    padding-top: 60px;
+}
+.todo.container .list-up form {
+    display: flex;
+    flex-direction: column;
+    width: 800px;
+    margin: 0 auto;
+    font-family: "Noto Sans KR";
+    align-items: flex-end;
+}
+.todo.container .list-up form input:focus {
+    outline: none;
+}
+.todo.container .list-up form label {
+    font-size: 1.071em;
+}
+.todo.container .list-up form .title-date-group {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-bottom: 10px;
+    width: 100%;
+}
+.todo.container .list-up form .title-date-group div {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+.todo.container .list-up form .title-date-group div input {
+    padding: 10px;
+    border: none;
+    border-bottom: solid 1px #444;
+    margin-left: 5px;
+}
+.todo.container .list-up form textarea {
+    height: 80px;
+    width: 100%;
+}
+.todo.container .list-up form .save-btn {
+    display: flex;
+    width: 20%;
+    background-color: #E54D36;
+    border: none;
+    border-radius: 18px;
+    padding: 10px;
+    justify-content: center;
+    color: #ffffff;
+    font-family: "Noto Sans KR";
+    margin-top: 8px;
+}
+.todo.container .list-up form .save-btn:active,
+.todo.container .list-up form .save-btn:focus {
+    outline: none;
+}
+.todo.container .lists {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    margin-top: 30px;
+}
+.todo.container .lists .group {
+    width: 32%;
+    margin-right: 2%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.todo.container .lists .group label {
+    font-size: 1.143em;
+    color: #fff;
+    border-radius: 4px;
+    padding: 4px 10px;
+    font-family: "Noto Sans KR";
+    font-weight: bold;
+    letter-spacing: 2px;
+}
+.todo.container .lists .group.waiting label {
+    background-color: #9B9583;
+}
+.todo.container .lists .group.proceeding label {
+    background-color: #7C9D7B;
+}
+.todo.container .lists .group.ending label {
+    background-color: #7F7F76;
+}
+.todo.container .lists .group:last-child {
+    margin-right: 0;
+}
